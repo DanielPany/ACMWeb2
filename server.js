@@ -11,7 +11,7 @@ function send404Response(response)
 
 function onRequest(request, response)
 {
-	console.log("Request")
+	console.log("Request: " + request.connection.remoteAddress);
 
 	if (request.method == "GET" && (request.url == "/" || request.ur == "/index.html")) 
 	{
