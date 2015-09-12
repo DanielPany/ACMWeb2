@@ -13,7 +13,7 @@ function onRequest(request, response)
 {
 	console.log("Request: " + request.connection.remoteAddress);
 
-	if (request.method == "GET" && (request.url == "/" || request.ur == "/index.html")) 
+	if (request.method == "GET" && (request.url == "/" || request.url == "/index.html")) 
 	{
 		response.writeHead(200, {"Context-Type": "Text/plain"})
 		fs.createReadStream("./index.html").pipe(response);
